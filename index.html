@@ -116,6 +116,73 @@ footer{padding:28px 0;background:#100d0b;border-top:1px solid var(--line);color:
 @media(min-width:760px){.contact-details{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-details .contact-address{grid-column:1/-1}}
 @media(max-width:680px){.mapframe{height:230px}.contact-details a,.contact-details .contact-address{font-size:.95rem;min-height:54px}}
 
+
+/* FINAL FIX – kontaktet me kontrast të lartë, pa kuti të bardha */
+#kontakt {background:#17110d !important;color:#f7eee4 !important}
+#kontakt .sectionhead h2,
+#kontakt .sectionhead p,
+#kontakt .contactbox,
+#kontakt .mapbox {color:#f7eee4 !important}
+#kontakt .contactbox,
+#kontakt .mapbox {
+  background:linear-gradient(145deg,#2b1d13,#19120e) !important;
+  border:1px solid rgba(232,165,61,.48) !important;
+  border-radius:18px !important;
+}
+#kontakt .contactline,
+#kontakt .contactline span,
+#kontakt .contactline div {color:#f7eee4 !important}
+#kontakt .contactline b {color:#efad43 !important}
+#kontakt .contact-details {
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:12px !important;
+  margin-top:22px !important;
+}
+#kontakt .contact-details a,
+#kontakt .contact-details .contact-address {
+  display:flex !important;
+  align-items:center !important;
+  min-height:60px !important;
+  padding:15px 18px !important;
+  box-sizing:border-box !important;
+  border:1.5px solid #bd7925 !important;
+  border-radius:14px !important;
+  background:linear-gradient(110deg,rgba(66,39,17,.98),rgba(27,18,12,.98)) !important;
+  color:#fff7ed !important;
+  -webkit-text-fill-color:#fff7ed !important;
+  font-size:16px !important;
+  font-weight:600 !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  overflow-wrap:anywhere !important;
+  box-shadow:0 5px 18px rgba(0,0,0,.22) !important;
+}
+#kontakt .contact-details a:visited {color:#fff7ed !important}
+#kontakt .contact-details a:hover {
+  background:linear-gradient(110deg,#533116,#2b1b10) !important;
+  border-color:#f5b54b !important;
+}
+#kontakt .contact-details .contact-address {grid-column:1/-1 !important}
+#kontakt .socials a {color:#fff7ed !important;border-color:#bd7925 !important}
+#kontakt .note {color:#d9c7b5 !important}
+#kontakt .mapframe {background:#24180f !important;border-color:#bd7925 !important}
+#kontakt .mapframe iframe {width:100% !important;height:100% !important}
+@media(min-width:760px) {
+  #kontakt .contact-details {grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  #kontakt .contact-details .contact-address {grid-column:1/-1 !important}
+}
+@media(max-width:680px) {
+  #kontakt .contact-details a,
+  #kontakt .contact-details .contact-address {
+    min-height:56px !important;
+    padding:13px 14px !important;
+    font-size:15px !important;
+  }
+}
+
 </style>
 </head>
 <body>
