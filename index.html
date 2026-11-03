@@ -100,6 +100,22 @@ footer{padding:28px 0;background:#100d0b;border-top:1px solid var(--line);color:
 .brand-logo{width:76px;height:82px;object-fit:contain;object-position:center;display:block;flex:0 0 auto}
 @media(max-width:680px){.brand-logo{width:72px;height:78px}}
 
+
+/* Kontaktet: kontrast i qartë dhe paraqitje profesionale në telefon/PC */
+.contact-details{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+.contact-details a,.contact-details .contact-address{
+  display:flex;align-items:center;min-height:58px;padding:14px 16px;
+  border:1px solid rgba(224,164,68,.34);border-radius:12px;
+  background:linear-gradient(135deg,#2a1e16,#1d1511);
+  color:#f4e9dc;font-size:1rem;line-height:1.45;
+  overflow-wrap:anywhere;text-decoration:none;
+}
+.contact-details a:hover{border-color:var(--gold);background:#302116}
+.mapframe{height:280px;padding:0;overflow:hidden;border:1px solid var(--line);background:#211811}
+.mapframe iframe{display:block;width:100%;height:100%;border:0;border-radius:13px}
+@media(min-width:760px){.contact-details{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-details .contact-address{grid-column:1/-1}}
+@media(max-width:680px){.mapframe{height:230px}.contact-details a,.contact-details .contact-address{font-size:.95rem;min-height:54px}}
+
 </style>
 </head>
 <body>
@@ -186,11 +202,16 @@ Fotot e galerisë mund të zëvendësohen me fotot reale të punimeve.
 
 <section class="section" id="kontakt"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">Jemi këtu për t'ju ndihmuar</div><h2>Flasim për projektin tuaj?</h2></div><p>Na telefononi, na shkruani në WhatsApp ose na gjeni në rrjetet sociale. Për një përgjigje më të saktë, dërgoni foton dhe përmasat e ambientit.</p></div>
 <div class="contactgrid"><div class="contactbox"><h3>Oxhaqe Cinga</h3><div class="contactline"><span>☎</span><div><b>Telefon</b><span data-phone-label>Vendosni numrin e telefonit</span></div></div><div class="contactline"><span>⌖</span><div><b>Adresa</b><span data-address-label>Vendosni adresën e biznesit</span></div></div><div class="contactline"><span>✉</span><div><b>Email</b><span data-email-label>Vendosni email-in</span></div></div><div class="socials"><a data-facebook href="#">Facebook ↗</a><a data-instagram href="#">Instagram ↗</a><a data-tiktok href="#">TikTok ↗</a></div><p class="note">Përpara publikimit, plotësoni të gjitha të dhënat e kontaktit te seksioni CONFIG në fund të kodit.</p><a class="btn" data-phone href="#">☎ Telefononi tani</a></div>
-<div class="mapbox"><h3>Na gjeni në hartë</h3><div class="mapframe"><div><strong>📍 Oxhaqe Cinga</strong><span>Harta do të shfaqet pasi të vendoset adresa ose linku i Google Maps.</span></div></div><a class="btn outline small" data-map href="#">Hap Google Maps ↗</a></div></div>
+<div class="mapbox"><h3>Na gjeni në hartë</h3><div class="mapframe">
+  <iframe title="Vendndodhja e Oxhaqe Cinga në Sauk, Tiranë"
+    src="https://www.google.com/maps?q=Sauk%2C%20Tiran%C3%AB%2C%20pran%C3%AB%20New%20York%20School&output=embed"
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen></iframe>
+</div><a class="btn outline small" data-map href="#">Hap Google Maps ↗</a></div></div>
 </div>
 <div class="contact-details"><div class="contact-address">📍 Adresa: Sauk, Tiranë, ngjitur me New York School</div>
   <a href="tel:+355685252555">📞 +355 68 52 52 555</a>
-  <a href="mailto:Oxhaqecinga@gmail.com">✉️ Oxhaqecinga@gmail.com</a>
+  <a href="mailto:oxhaqecinga@gmail.com">✉️ oxhaqecinga@gmail.com</a>
   <a href="https://www.instagram.com/oxhaqe.cinga?mdxt=ZTB0NmR6ZGo4ZGM=" target="_blank" rel="noopener">Instagram: @oxhaqe.cinga</a>
   <a href="https://www.facebook.com/share/1GEr27YEFo/" target="_blank" rel="noopener">Facebook – Oxhaqe Cinga</a>
   <a href="https://maps.app.goo.gl/Z2grH8Q32QwEtPG9A" target="_blank" rel="noopener">📍 Hap vendndodhjen në Google Maps</a>
@@ -203,14 +224,14 @@ Fotot e galerisë mund të zëvendësohen me fotot reale të punimeve.
 <script>
 // CONFIG — plotësoni të dhënat reale përpara publikimit.
 const CONFIG = {
-  phone: "+355XXXXXXXXX",          // p.sh. +355 69 XXX XXXX
-  whatsapp: "355XXXXXXXXX",        // vetëm numra, pa + ose hapësira
-  address: "Vendosni adresën e saktë, qytetin, Shqipëri",
-  email: "Oxhaqecinga@gmail.com",
-  facebook: "https://www.facebook.com/",
-  instagram: "https://www.instagram.com/",
+  phone: "+355685252555",
+  whatsapp: "355685252555",
+  address: "Sauk, Tiranë, pranë New York School, Shqipëri",
+  email: "oxhaqecinga@gmail.com",
+  facebook: "https://www.facebook.com/share/1GEr27YEFo/",
+  instagram: "https://www.instagram.com/oxhaqe.cinga/",
   tiktok: "",
-  maps: "https://www.google.com/maps"
+  maps: "https://maps.app.goo.gl/Z2grH8Q32QwEtPG9A"
 };
 const productInfo = {
   tradicionale:["Oxhaqe tradicionale","Oxhaqet me dru sjellin atmosferën klasike të zjarrit në shtëpi. Përpara përzgjedhjes vlerësohen përmasat e hapësirës, oxhaku i tymit, ajri i nevojshëm për djegie, izolimi dhe veshja dekorative. Fuqia dhe dimensionet përcaktohen sipas modelit dhe ambientit."],
