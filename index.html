@@ -42,6 +42,54 @@ footer{padding:28px 0;background:#100d0b;border-top:1px solid var(--line);color:
 .cat b{margin-top:auto}
 @media(max-width:680px){.cat{min-height:155px;padding:14px 12px}.cat b{font-size:.92rem}.cat small{font-size:.82rem}}
 
+
+/* FIX: make category photos visibly render on mobile and desktop */
+.categories .cat{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:220px;
+  padding:16px 14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:#211912;
+}
+.categories .cat .cat-photo{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:1;
+  visibility:visible;
+}
+.categories .cat::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(180deg,rgba(15,10,7,.02) 15%,rgba(15,10,7,.18) 43%,rgba(15,10,7,.92) 100%);
+  pointer-events:none;
+}
+.categories .cat b,
+.categories .cat small{
+  position:relative;
+  z-index:2;
+  display:block;
+  text-shadow:0 2px 7px rgba(0,0,0,.95);
+}
+.categories .cat b{margin-top:auto;font-size:1rem;line-height:1.2;color:#fff8ef}
+.categories .cat small{margin-top:7px;color:#f0b44d;font-size:.9rem}
+@media(max-width:680px){
+  .categories .cat{min-height:190px;padding:13px 11px}
+  .categories .cat b{font-size:.92rem}
+  .categories .cat small{font-size:.82rem}
+}
+
 </style>
 </head>
 <body>
