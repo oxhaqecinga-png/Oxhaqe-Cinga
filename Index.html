@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oxhaqe Cinga – ekspozitë oxhaqesh me dru, elektrike dhe bioetanol. Projekte, montim profesional dhe shërbim në të gjithë Shqipërinë.">
+  <meta name="keywords" content="oxhaqe, oxhaqe me dru, oxhaqe elektrike, oxhaqe bioetanol, montim oxhaqesh, oxhaqe moderne, Oxhaqe Cinga">
+  <meta name="theme-color" content="#171512">
+  <title>Oxhaqe Cinga | Oxhaqe moderne dhe montim profesional</title>
+  <style>
+    :root{--ink:#191714;--muted:#6f6a62;--cream:#f5f1e9;--paper:#fffdf9;--gold:#b88a4b;--line:#e7e0d5}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .top{background:#171512;color:#eee7dc;font-size:13px;padding:9px 5%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:10;background:#fffdf9ed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1200px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:1.4px;font-size:21px}.brand span{color:var(--gold)}
+    nav{display:flex;gap:23px;align-items:center;font-size:14px;font-weight:600}nav a:hover{color:var(--gold)}
+    .btn{display:inline-block;background:var(--gold);color:#fff;padding:12px 19px;border-radius:3px;font-weight:700;font-size:14px;transition:.2s}
+    .btn:hover{background:#956b35;transform:translateY(-1px)}.btn.dark{background:#201d19}.btn.outline{background:transparent;border:1px solid #ffffffa8}
+    .hero{min-height:590px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(15,13,11,.88),rgba(15,13,11,.54),rgba(15,13,11,.15)),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero-inner{max-width:1200px;width:100%;margin:auto;padding:85px 5%}
+    .eyebrow{color:#d6b17a;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700}
+    h1{font-size:clamp(38px,6vw,68px);line-height:1.08;max-width:720px;margin:18px 0}
+    .hero p{font-size:18px;max-width:570px;color:#f0ece6;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+    section{padding:78px 5%}.wrap{max-width:1200px;margin:auto}.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+    .section-head h2{font-size:clamp(29px,4vw,42px);line-height:1.15;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .category{background:#fff;border:1px solid var(--line);overflow:hidden}.category .photo{height:235px;background-size:cover;background-position:center}
+    .category .body{padding:23px}.category h3{margin:0 0 8px;font-size:22px}.category p{color:var(--muted);font-size:14px;margin:0 0 15px}
+    .text-link{color:#986c36;font-weight:700;font-size:14px}
+    .about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-image{min-height:430px;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85') center/cover}
+    .about h2{font-size:clamp(30px,4vw,43px);line-height:1.15;margin:12px 0 18px}.about p{color:var(--muted)}
+    .ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.ticks span:before{content:'✓';color:var(--gold);font-weight:900;margin-right:9px}
+    .projects{background:#211e19;color:white}.projects .section-head p{color:#c9c0b4}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.project{height:270px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+    .project:after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#000b)}
+    .project span{position:absolute;z-index:1;bottom:17px;left:18px;font-weight:700}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{padding:26px;border:1px solid var(--line);background:#fff}.service b{font-size:18px}.service p{color:var(--muted);font-size:14px;margin-bottom:0}
+    .banner{background:linear-gradient(100deg,#181511ed,#181511b8),url('https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1800&q=80') center/cover;color:white;text-align:center}
+    .banner h2{font-size:clamp(28px,4vw,42px);margin:0 0 12px}.banner p{color:#e1d9ce;margin:0 auto 24px;max-width:650px}
+    .contact{background:var(--cream)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+    .contact h2{font-size:38px;line-height:1.15;margin:8px 0 15px}.contact p{color:var(--muted)}
+    .contact-list{display:grid;gap:14px;margin-top:24px}.contact-item{display:flex;gap:12px;align-items:flex-start}.contact-item strong{display:block}
+    .contact-card{background:#fff;padding:28px;border:1px solid var(--line)}.contact-card h3{margin-top:0}
+    footer{background:#171512;color:#e9e1d5;padding:38px 5%}.foot{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.foot small{color:#bdb4a8}
+    .wa{position:fixed;right:20px;bottom:20px;z-index:20;background:#218b55;color:white;border-radius:50px;padding:13px 18px;font-weight:700;box-shadow:0 5px 20px #0003}
+    @media(max-width:800px){nav{display:none}.grid3,.services-grid,.project-grid{grid-template-columns:1fr 1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.hero{min-height:540px}.about-image{min-height:300px}}
+    @media(max-width:540px){.grid3,.services-grid,.project-grid{grid-template-columns:1fr}.top{justify-content:center;text-align:center}.hero-inner{padding-top:65px;padding-bottom:65px}section{padding:58px 5%}.ticks{grid-template-columns:1fr 1fr}.category .photo{height:220px}}
+  </style>
+</head>
+<body>
+  <div class="top">
+    <span>Ekspozitë oxhaqesh në Sauk, Tiranë</span>
+    <span>Shërbim dhe montim në të gjithë Shqipërinë · <a href="tel:+355685252555">+355 68 52 52 555</a></span>
+  </div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home">OXHAQE <span>CINGA</span></a>
+      <nav>
+        <a href="#home">Kryefaqja</a><a href="#kategorite">Produktet</a><a href="#rreth-nesh">Rreth nesh</a><a href="#projektet">Projektet</a><a href="#sherbimet">Shërbimet</a><a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="btn" href="https://wa.me/355685252555">Na kontaktoni</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">Dizajn · Cilësi · Montim profesional</div>
+        <h1>Ngrohtësi që i jep karakter çdo ambienti.</h1>
+        <p>Zbuloni koleksionin e oxhaqeve moderne me dru, elektrike dhe bioetanol. Ju ndihmojmë të zgjidhni modelin e duhur dhe kujdesemi për montimin.</p>
+        <div class="actions"><a class="btn" href="#kategorite">Zbuloni produktet</a><a class="btn outline" href="https://wa.me/355685252555">Kërko një ofertë</a></div>
+      </div>
+    </section>
+
+    <section id="kategorite">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Koleksioni ynë</div><h2>Gjeni oxhakun që i përshtatet shtëpisë suaj</h2><p>Zgjidhje për stile dhe nevoja të ndryshme, nga eleganca klasike te linjat minimaliste moderne.</p></div>
+        <div class="grid3">
+          <article class="category"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85')"></div><div class="body"><h3>Oxhaqe me dru</h3><p>Atmosfera autentike e flakës natyrale, me modele dhe konfigurime të ndryshme për ambientin tuaj.</p><a class="text-link" href="https://wa.me/355685252555?text=Pershendetje%2C%20dua%20informacion%20per%20oxhaqe%20me%20dru.">Kërko informacion →</a></div></article>
+          <article class="category"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85')"></div><div class="body"><h3>Oxhaqe elektrike</h3><p>Dizajn bashkëkohor dhe efekt flake për ambiente moderne, me përdorim praktik.</p><a class="text-link" href="https://wa.me/355685252555?text=Pershendetje%2C%20dua%20informacion%20per%20oxhaqe%20elektrike.">Kërko informacion →</a></div></article>
+          <article class="category"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85')"></div><div class="body"><h3>Oxhaqe bioetanol</h3><p>Zgjidhje dekorative me linja elegante për të krijuar një pikë të veçantë në interier.</p><a class="text-link" href="https://wa.me/355685252555?text=Pershendetje%2C%20dua%20informacion%20per%20oxhaqe%20bioetanol.">Kërko informacion →</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="rreth-nesh">
+      <div class="wrap about-grid">
+        <div class="about-image" role="img" aria-label="Ambient modern me oxhak"></div>
+        <div><div class="eyebrow">Rreth Oxhaqe Cinga</div><h2>Eksperiencë, përkushtim dhe zgjidhje të menduara për çdo projekt.</h2>
+          <p>Oxhaqe Cinga është ekspozita juaj për oxhaqe dhe zgjidhje moderne ngrohjeje. Ju asistojmë në përzgjedhjen e produktit, planifikimin e projektit dhe montimin profesional.</p>
+          <p>Jemi në Sauk, Tiranë, dhe ofrojmë shërbim në të gjithë Shqipërinë.</p>
+          <div class="ticks"><span>Këshillim përzgjedhjeje</span><span>Montim profesional</span><span>Zgjidhje moderne</span><span>Shërbim në Shqipëri</span></div>
+          <a class="btn dark" href="#kontakt">Flisni me ne</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projektet">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Punët tona</div><h2>Projekte që sjellin ngrohtësi dhe stil</h2><p>Çdo ambient ka karakterin e vet. Shikoni disa ide frymëzuese dhe na kontaktoni për projektin tuaj.</p></div>
+        <div class="project-grid">
+          <div class="project" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85')"><span>Oxhak modern</span></div>
+          <div class="project" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85')"><span>Dizajn minimalist</span></div>
+          <div class="project" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85')"><span>Elegancë në interier</span></div>
+        </div>
+        <p style="text-align:center;color:#c9c0b4;font-size:13px;margin-top:22px">Fotot aktuale janë imazhe ilustruese. Mund t’i zëvendësojmë me fotografitë reale të projekteve tuaja.</p>
+      </div>
+    </section>
+
+    <section id="sherbimet">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Nga ideja te realizimi</div><h2>Shërbimet tona</h2><p>Mbështetje përgjatë gjithë procesit, nga zgjedhja e oxhakut deri te përfundimi i instalimit.</p></div>
+        <div class="services-grid">
+          <div class="service"><b>01 · Konsultim</b><p>Ju ndihmojmë të gjeni modelin dhe konfigurimin e përshtatshëm për hapësirën tuaj.</p></div>
+          <div class="service"><b>02 · Planifikim projekti</b><p>Vlerësim i ambientit dhe orientim për zgjidhjen teknike të oxhakut.</p></div>
+          <div class="service"><b>03 · Montim profesional</b><p>Ekip i specializuar për instalimin dhe realizimin e projektit tuaj.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="wrap"><h2>Po mendoni të vendosni një oxhak?</h2><p>Na tregoni çfarë keni në mendje. Ekipi i Oxhaqe Cinga ju ndihmon të gjeni zgjidhjen e duhur për shtëpinë ose biznesin tuaj.</p><a class="btn" href="https://wa.me/355685252555">Kontaktoni në WhatsApp</a></div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="wrap contact-grid">
+        <div><div class="eyebrow">Na gjeni</div><h2>Le të flasim për projektin tuaj.</h2><p>Vizitoni ekspozitën tonë ose na kontaktoni për informacion mbi produktet, projektet dhe montimin.</p>
+          <div class="contact-list">
+            <div class="contact-item"><div>📍</div><div><strong>Adresa</strong>Sauk, Tiranë, ngjitur me New York School</div></div>
+            <div class="contact-item"><div>☎</div><div><strong>Telefon / WhatsApp</strong><a href="tel:+355685252555">+355 68 52 52 555</a></div></div>
+            <div class="contact-item"><div>✉</div><div><strong>Email</strong><a href="mailto:Oxhaqecinga@gmail.com">Oxhaqecinga@gmail.com</a></div></div>
+            <div class="contact-item"><div>◎</div><div><strong>Instagram</strong><a href="https://www.instagram.com/oxhaqe.cinga/" target="_blank" rel="noopener"> @oxhaqe.cinga</a></div></div>
+          </div>
+        </div>
+        <div class="contact-card"><h3>Vizitoni ekspozitën</h3><p>Na gjeni në Sauk, Tiranë. Përpara vizitës, mund të na telefononi për të marrë informacion.</p>
+          <a class="btn dark" href="https://maps.app.goo.gl/Z2grH8Q32QwEtPG9A" target="_blank" rel="noopener">Hap vendndodhjen në Google Maps</a>
+          <hr style="border:0;border-top:1px solid #e7e0d5;margin:25px 0">
+          <h3>Na ndiqni në rrjete sociale</h3>
+          <p><a class="text-link" href="https://www.instagram.com/oxhaqe.cinga/" target="_blank" rel="noopener">Instagram →</a></p>
+          <p><a class="text-link" href="https://www.facebook.com/share/1GEr27YEFo/" target="_blank" rel="noopener">Facebook →</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="foot"><div><div class="brand">OXHAQE <span>CINGA</span></div><small>Oxhaqe moderne · Projekte · Montim profesional</small></div><small>© <span id="year">2026</span> Oxhaqe Cinga. Të gjitha të drejtat e rezervuara.</small></div></footer>
+  <a class="wa" href="https://wa.me/355685252555" aria-label="Na kontaktoni në WhatsApp">WhatsApp</a>
+</body>
+</html>
