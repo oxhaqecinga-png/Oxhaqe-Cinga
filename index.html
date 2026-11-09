@@ -219,67 +219,300 @@ footer{padding:28px 0;background:#100d0b;border-top:1px solid var(--line);color:
 #me-dru .product-img img{width:100%;height:100%;object-fit:cover;object-position:center}
 @media(max-width:680px){#me-dru .product-img{height:clamp(210px,58vw,300px)}}
 
-/* Përmirësime të kujdesshme për paraqitje më profesionale dhe mobile */
-:focus-visible {
-  outline: 2px solid var(--gold2);
-  outline-offset: 3px;
+/* ===== OXHAQE CINGA | Përmirësim vizual i faqes ekzistuese ===== */
+:root {
+  --bg: #120e0b;
+  --panel: #1d1712;
+  --panel2: #292017;
+  --gold: #e9a33b;
+  --gold2: #ffc66d;
+  --cream: #fff7ed;
+  --muted: #d0c0ae;
+  --line: rgba(233,163,59,.24);
+  --max: 1240px;
 }
-html { scroll-padding-top: 92px; }
-img { max-width: 100%; }
-.product, .cat, .step, .contactbox, .mapbox, .faq details {
-  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+html { scroll-padding-top: 104px; }
+body { background:var(--bg); color:var(--cream); }
+::selection { background:rgba(233,163,59,.35); color:#fff; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline:2px solid var(--gold2); outline-offset:4px;
 }
-.product:hover, .step:hover, .contactbox:hover, .mapbox:hover {
-  border-color: rgba(233,163,59,.48);
-  box-shadow: 0 12px 30px rgba(0,0,0,.16);
+.wrap { width:min(var(--max),92%); }
+
+/* Header – logoja origjinale dhe identiteti i artë ruhen */
+header {
+  background:rgba(18,14,11,.96);
+  border-bottom:1px solid rgba(233,163,59,.32);
+  box-shadow:0 8px 26px rgba(0,0,0,.2);
 }
-.step { min-height: 100%; }
-.step h3 { line-height: 1.3; }
-.step p { line-height: 1.65; }
-@media (max-width: 680px) {
-  html { scroll-padding-top: 76px; }
-  .steps {
-    grid-template-columns: 1fr !important;
-    gap: 12px;
+.navrow { min-height:88px; gap:26px; }
+.brand { gap:18px; }
+.brand-logo { width:78px; height:84px; }
+.brand-tagline {
+  padding-left:17px;
+  border-left:2px solid var(--gold);
+  font-size:.76rem;
+  letter-spacing:.13em;
+  color:var(--gold2);
+}
+.nav { gap:clamp(13px,1.8vw,25px); font-weight:650; }
+.nav > a:not(.btn), .dropbtn { transition:color .2s ease; }
+.nav .btn { padding:11px 18px; }
+.dropmenu { z-index:25; }
+.topbar { background:#0b0908; }
+
+/* Hero – përdor fotografinë origjinale të faqes, pa e zëvendësuar produktin */
+.hero {
+  min-height:610px;
+  background-position:center right;
+  background-size:cover;
+  border-bottom:1px solid rgba(233,163,59,.25);
+}
+.hero .wrap { position:relative; z-index:1; }
+.hero-content { max-width:660px; padding:78px 0 72px; }
+.hero .eyebrow {
+  color:var(--gold2);
+  letter-spacing:.16em;
+  font-size:.78rem;
+  font-weight:800;
+  text-transform:uppercase;
+}
+.hero .script {
+  color:#fff8ef;
+  font-size:clamp(2.7rem,5.6vw,5rem);
+  font-weight:900;
+  letter-spacing:-.045em;
+  line-height:1.04;
+  text-shadow:0 4px 22px #0009;
+}
+.hero h1 {
+  margin:10px 0 17px;
+  font-size:clamp(1.55rem,3vw,2.55rem);
+  line-height:1.18;
+  letter-spacing:-.025em;
+}
+.hero h1 span { color:var(--gold2); }
+.hero-content > p {
+  max-width:590px;
+  color:#f1e5d8;
+  font-size:clamp(1rem,1.3vw,1.15rem);
+  line-height:1.75;
+  text-shadow:0 2px 10px #000b;
+}
+.actions { gap:13px; margin-top:25px; }
+.btn { min-height:46px; }
+.btn:hover { box-shadow:0 12px 28px rgba(225,126,21,.25); }
+.trust { gap:10px; margin-top:27px; }
+.trust span {
+  padding:8px 12px;
+  border:1px solid rgba(255,206,139,.26);
+  border-radius:999px;
+  background:rgba(17,12,8,.52);
+  color:#fff3e3;
+  font-size:.84rem;
+}
+
+/* Seksionet – ritëm dhe hierarki më e qartë */
+.section { padding:82px 0; }
+.section.alt {
+  background:linear-gradient(180deg,#1a140f 0%,#15100d 100%);
+  border-top:1px solid rgba(233,163,59,.12);
+  border-bottom:1px solid rgba(233,163,59,.12);
+}
+.sectionhead { gap:35px; margin-bottom:32px; align-items:end; }
+.eyebrow { color:var(--gold2); font-weight:800; letter-spacing:.13em; }
+.sectionhead h2 { font-size:clamp(1.8rem,3vw,2.55rem); line-height:1.15; }
+.sectionhead p { max-width:510px; color:var(--muted); line-height:1.75; }
+
+/* Kategoritë dhe produktet – fotografitë ekzistuese ruhen */
+.categories { gap:16px; }
+.categories .cat {
+  min-height:205px;
+  border:1px solid rgba(233,163,59,.32);
+  border-radius:17px;
+  box-shadow:0 12px 30px rgba(0,0,0,.16);
+}
+.categories .cat:hover { border-color:var(--gold); transform:translateY(-3px); }
+.products { gap:22px; }
+.product {
+  overflow:hidden;
+  border:1px solid rgba(233,163,59,.22);
+  border-radius:18px;
+  background:linear-gradient(160deg,#251b14,#18120e);
+  box-shadow:0 12px 32px rgba(0,0,0,.2);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+.product:hover {
+  transform:translateY(-4px);
+  border-color:rgba(233,163,59,.62);
+  box-shadow:0 18px 38px rgba(0,0,0,.28);
+}
+.product-img { overflow:hidden; }
+.product-img img, .gallery img { transition:transform .45s ease; }
+.product:hover .product-img img { transform:scale(1.035); }
+.product-body { padding:23px; }
+.product-body h3 { font-size:1.22rem; line-height:1.3; }
+.product-body p, .features { color:var(--muted); }
+.features { padding-left:19px; line-height:1.7; }
+.product-actions { gap:10px; flex-wrap:wrap; }
+
+/* Rreth nesh / galeria / pyetjet */
+.split { gap:clamp(28px,5vw,70px); align-items:center; }
+.photo { border:1px solid rgba(233,163,59,.35); border-radius:20px; }
+.checks { gap:13px 18px; }
+.check { color:#f5e8d8; }
+.check i { color:var(--gold2); }
+.gallery { gap:14px; }
+.gitem { border:1px solid rgba(233,163,59,.25); border-radius:15px; overflow:hidden; }
+.gitem img { transition:transform .4s ease; }
+.gitem:hover img { transform:scale(1.04); }
+.faq { gap:12px; }
+.faq details {
+  background:linear-gradient(145deg,#241a13,#19120e);
+  border:1px solid rgba(233,163,59,.2);
+  border-radius:14px;
+  padding:19px 21px;
+}
+.faq details[open] { border-color:rgba(233,163,59,.6); }
+.faq summary { color:#fff4e6; line-height:1.45; }
+.faq details p { color:var(--muted); line-height:1.7; }
+
+/* Shërbimet – katër hapa të lexueshëm, pa karta tepër të larta */
+.steps { gap:16px; align-items:stretch; }
+.step {
+  min-width:0;
+  padding:22px 20px;
+  border:1px solid rgba(233,163,59,.28);
+  border-radius:17px;
+  background:linear-gradient(145deg,#292017,#1b140f);
+  box-shadow:0 10px 26px rgba(0,0,0,.14);
+  transition:transform .2s ease,border-color .2s ease;
+}
+.step:hover { transform:translateY(-3px); border-color:rgba(233,163,59,.7); }
+.step .num {
+  width:48px; height:48px;
+  display:grid; place-items:center;
+  border:1px solid rgba(255,191,98,.28);
+  background:rgba(233,163,59,.15);
+  color:var(--gold2);
+  font-weight:900;
+}
+.step h3 { margin:15px 0 8px; font-size:1.08rem; line-height:1.35; }
+.step p { margin:0; color:var(--muted); font-size:.96rem; line-height:1.65; }
+
+/* Kontaktet dhe fundfaqja */
+.contactgrid { gap:20px; }
+.contactbox,.mapbox {
+  padding:28px;
+  border-color:rgba(233,163,59,.3);
+  background:linear-gradient(145deg,#261c14,#19120e);
+}
+.contactline { line-height:1.55; }
+.contactline a:hover { color:var(--gold2); }
+.mapframe { border-radius:14px; }
+footer { background:#0b0908; border-top:1px solid rgba(233,163,59,.3); }
+.wa { box-shadow:0 8px 30px #0009,0 0 0 4px rgba(32,198,106,.12); }
+
+/* Tablet */
+@media(max-width:900px) {
+  .navrow { gap:15px; }
+  .brand-tagline { font-size:.68rem; }
+  .nav { gap:12px; font-size:.88rem; }
+  .hero { min-height:560px; }
+  .hero-content { max-width:590px; }
+  .products { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+/* Telefon – navigim dhe përmbajtje të rregullta */
+@media(max-width:680px) {
+  html { scroll-padding-top:78px; }
+  .topinner { justify-content:center; padding:7px 0; }
+  .toplinks { justify-content:center; gap:8px 15px; font-size:.78rem; }
+  .navrow { min-height:76px; gap:10px; }
+  .brand { gap:10px; }
+  .brand-logo { width:61px; height:68px; }
+  .brand-tagline {
+    padding-left:10px;
+    font-size:.57rem;
+    letter-spacing:.09em;
   }
+  .menu { display:block; padding:9px 12px; font-size:1.15rem; }
+  .nav {
+    top:76px;
+    padding:16px 5% 20px;
+    gap:7px;
+    background:rgba(18,14,11,.99);
+    border-bottom:1px solid rgba(233,163,59,.35);
+    box-shadow:0 16px 25px #0008;
+  }
+  .nav a { padding:10px 8px; }
+  .nav .btn { text-align:center; margin-top:5px; }
+  .dropmenu { background:#211811; border-color:rgba(233,163,59,.25); }
+  .hero {
+    min-height:550px;
+    background-position:58% center;
+  }
+  .hero-content { padding:55px 0 48px; max-width:100%; }
+  .hero .script { font-size:clamp(2.65rem,12vw,4rem); }
+  .hero h1 { font-size:1.65rem; }
+  .hero-content > p { max-width:440px; font-size:.98rem; line-height:1.65; }
+  .actions { flex-wrap:wrap; }
+  .trust { display:flex; flex-wrap:wrap; }
+  .trust span { font-size:.76rem; padding:7px 10px; }
+  .section { padding:55px 0; }
+  .sectionhead { display:block; margin-bottom:23px; }
+  .sectionhead p { margin-top:12px; }
+  .categories { grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
+  .categories .cat { min-height:165px; padding:13px 11px; }
+  .categories .cat b { font-size:.9rem; }
+  .categories .cat small { font-size:.78rem; }
+  .split,.contactgrid { grid-template-columns:1fr; }
+  .photo { min-height:230px; }
+  .products { grid-template-columns:1fr; gap:17px; }
+  .product-body { padding:19px; }
+  .steps { grid-template-columns:1fr; gap:11px; }
   .step {
-    display: grid;
-    grid-template-columns: 46px minmax(0,1fr);
-    column-gap: 14px;
-    align-items: start;
-    padding: 17px 16px;
+    display:grid;
+    grid-template-columns:43px minmax(0,1fr);
+    column-gap:13px;
+    align-items:start;
+    padding:16px;
   }
   .step .num {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    width: 42px;
-    height: 42px;
-    margin-top: 1px;
+    grid-column:1;
+    grid-row:1 / span 2;
+    width:41px; height:41px;
+    margin:1px 0 0;
   }
   .step h3 {
-    grid-column: 2;
-    margin: 0 0 5px;
-    font-size: 1.04rem;
+    grid-column:2;
+    margin:0 0 5px;
+    font-size:1rem;
   }
   .step p {
-    grid-column: 2;
-    margin: 0;
-    font-size: .91rem;
-    line-height: 1.55;
+    grid-column:2;
+    font-size:.9rem;
+    line-height:1.55;
   }
-  .section { padding: 50px 0; }
-  .sectionhead { margin-bottom: 23px; }
-  .sectionhead p { margin-top: 10px; }
-  .hero-content { max-width: 100%; }
-  .actions .btn { min-height: 46px; }
-  .wa { width: 54px; height: 54px; }
+  .gallery { grid-template-columns:1fr 1fr; grid-template-rows:140px 140px 140px; }
+  .gitem:first-child { grid-row:auto; grid-column:span 2; }
+  .faq { grid-template-columns:1fr; }
+  .checks { grid-template-columns:1fr; }
+  .contactbox,.mapbox { padding:20px; }
+  .mapframe { height:230px; }
+  .wa { right:14px; bottom:14px; width:54px; height:54px; }
 }
-@media (max-width: 380px) {
-  .wrap { width: 91%; }
-  .toplinks { gap: 11px; font-size: .82rem; }
-  .categories { gap: 9px; }
-  .categories .cat { min-height: 165px; }
-  .brand { gap: 8px; }
+@media(max-width:380px) {
+  .wrap { width:91%; }
+  .brand-tagline { max-width:160px; font-size:.52rem; }
+  .toplinks { font-size:.73rem; }
+  .categories .cat { min-height:150px; }
+  .hero .script { font-size:2.55rem; }
+  .actions .btn { width:100%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
 }
 
 </style>
