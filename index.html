@@ -431,11 +431,195 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
   *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
 }
 
+
+/* OXHAQE CINGA — LUXURY REFINEMENT */
+:root{
+  --bg:#100f0d;
+  --panel:#191713;
+  --panel2:#211e18;
+  --gold:#b99a63;
+  --gold2:#d8bd8c;
+  --cream:#f3eee5;
+  --muted:#b9b0a2;
+  --line:rgba(207,181,137,.22);
+  --max:1240px;
+}
+html{scroll-padding-top:100px}
+body{
+  background:
+    radial-gradient(ellipse at 50% -18%,rgba(185,154,99,.075),transparent 42%),
+    var(--bg);
+  color:var(--cream);
+  letter-spacing:.005em;
+}
+.topbar{
+  background:#0b0a09;
+  border-bottom:1px solid rgba(185,154,99,.18);
+  color:#b9b0a2;
+  font-size:.78rem;
+  letter-spacing:.075em;
+}
+.topinner{padding:11px 0}
+.toplinks{gap:25px}
+.toplinks a{transition:color .2s ease}
+.toplinks a:hover{color:var(--gold2)}
+header{
+  background:rgba(16,15,13,.96);
+  border-bottom:1px solid rgba(185,154,99,.24);
+}
+.navrow{min-height:86px}
+.nav{
+  gap:clamp(14px,2vw,28px);
+  color:#e9e1d4;
+  font-size:.78rem;
+  font-weight:650;
+  letter-spacing:.095em;
+  text-transform:uppercase;
+}
+.nav>a:not(.btn),.dropbtn{
+  position:relative;
+  transition:color .2s ease;
+}
+.nav>a:not(.btn):after,.dropbtn:after{
+  content:"";
+  position:absolute;
+  left:0;right:100%;bottom:2px;
+  height:1px;
+  background:var(--gold2);
+  transition:right .25s ease;
+}
+.nav>a:not(.btn):hover:after,.dropbtn:hover:after{right:0}
+.dropbtn{
+  font-size:inherit;
+  font-weight:inherit;
+  letter-spacing:inherit;
+  text-transform:inherit;
+}
+.dropmenu{
+  min-width:285px;
+  padding:10px;
+  background:rgba(25,23,19,.985);
+  border:1px solid rgba(185,154,99,.34);
+  border-radius:8px;
+  box-shadow:0 24px 60px rgba(0,0,0,.55);
+  backdrop-filter:blur(18px);
+}
+.dropmenu a{
+  padding:13px 14px;
+  border-radius:4px;
+  color:#eee7dc;
+  font-size:.86rem;
+  font-weight:550;
+  letter-spacing:.025em;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  transition:background .2s ease,color .2s ease,padding .2s ease;
+}
+.dropmenu a:last-child{
+  margin-top:7px;
+  border:1px solid rgba(185,154,99,.25);
+  color:var(--gold2);
+  text-align:center;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:.72rem;
+}
+.dropmenu a:hover{
+  padding-left:19px;
+  background:rgba(185,154,99,.10);
+  color:var(--gold2);
+}
+.btn{
+  border-radius:5px;
+  border-color:var(--gold);
+  background:linear-gradient(135deg,#d2b47d,#a9854e);
+  color:#17130d;
+  box-shadow:0 10px 28px rgba(0,0,0,.2);
+  letter-spacing:.055em;
+  text-transform:uppercase;
+  font-size:.78rem;
+}
+.btn.outline{
+  border-radius:5px;
+  border-color:rgba(216,189,140,.55);
+  color:var(--cream);
+}
+.menu{
+  border-radius:5px;
+  border-color:rgba(185,154,99,.42);
+  color:var(--gold2);
+}
+h1,h2,.sectionhead h2,.product h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+  letter-spacing:.005em;
+}
+.section{padding-top:clamp(64px,7vw,104px);padding-bottom:clamp(64px,7vw,104px)}
+.sectionhead{margin-bottom:32px}
+.eyebrow{
+  color:var(--gold2);
+  letter-spacing:.19em;
+  font-size:.72rem;
+  font-weight:700;
+}
+.cat,.product,.gitem,.step,.faq-item{
+  border-radius:9px;
+  border-color:rgba(185,154,99,.28);
+}
+.cat{box-shadow:0 14px 38px rgba(0,0,0,.18)}
+.cat:before{
+  background:linear-gradient(180deg,rgba(8,7,6,.02) 12%,rgba(8,7,6,.22) 45%,rgba(8,7,6,.88) 100%);
+}
+.product{background:linear-gradient(155deg,#211e19,#151310)}
+.gallery .gitem{border-radius:8px}
+.wa{box-shadow:0 8px 28px rgba(0,0,0,.4)}
+@media(max-width:680px){
+  .topbar{font-size:.7rem;letter-spacing:.045em}
+  .toplinks{gap:13px}
+  .nav{
+    top:68px;
+    padding:20px 6% 26px;
+    gap:5px;
+    background:rgba(16,15,13,.99);
+    border-bottom:1px solid rgba(185,154,99,.28);
+    box-shadow:0 24px 35px rgba(0,0,0,.35);
+  }
+  .nav>a:not(.btn){
+    padding:13px 4px;
+    border-bottom:1px solid rgba(255,255,255,.065);
+    font-size:.82rem;
+    letter-spacing:.11em;
+  }
+  .dropdown{padding:4px 0}
+  .dropbtn{
+    padding:14px 4px;
+    font-size:.82rem;
+    letter-spacing:.11em;
+    border-bottom:1px solid rgba(185,154,99,.22);
+  }
+  .dropmenu{
+    display:none;
+    margin:8px 0 12px;
+    padding:7px;
+    min-width:0;
+    border-radius:6px;
+    background:#191713;
+    border-color:rgba(185,154,99,.24);
+  }
+  .dropdown.open .dropmenu{display:block}
+  .dropmenu a{
+    padding:12px 13px;
+    font-size:.8rem;
+    letter-spacing:.045em;
+  }
+  .dropmenu a:hover{padding-left:17px}
+  .nav .btn{margin-top:12px;padding:15px}
+}
+
 </style>
 </head>
 <body>
 <div class="topbar"><div class="wrap topinner">
-  <div class="toplinks"><a href="tel:+355685252555">☎ +355 68 52 52 555</a><a href="https://maps.app.goo.gl/Z2grH8Q32QwEtPG9A" target="_blank" rel="noopener">⌖ Sauk, Tiranë</a></div>
+  <div class="toplinks"><a href="tel:+355685252555">+355 68 52 52 555</a><a href="https://maps.app.goo.gl/Z2grH8Q32QwEtPG9A" target="_blank" rel="noopener">Sauk, Tiranë</a></div>
   <div class="toplinks"><a href="https://www.facebook.com/share/1GEr27YEFo/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/oxhaqe.cinga?mdxt=ZTB0NmR6ZGo4ZGM=" target="_blank" rel="noopener">Instagram</a></div>
 </div></div>
 <header><div class="wrap navrow">
@@ -446,12 +630,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
     <div class="dropdown">
       <button class="dropbtn" type="button" aria-expanded="false">Zgjidh oxhakun ▾</button>
       <div class="dropmenu">
-        <a href="#me-dru">🔥 Oxhaqe me dru</a>
-        <a href="#elektrike">✨ Oxhaqe elektrike</a>
-        <a href="#bioetanol">🕯️ Oxhaqe me bioetanol</a>
-        <a href="#xhama">◫ Oxhaqe me 2 pamje</a>
-        <a href="#tre-pamje">◫ Oxhaqe me 3 pamje</a>
-        <a href="#ushape">⌑ Oxhaqe në formë U (U-shape)</a>
+        <a href="#me-dru">Oxhaqe me dru</a>
+        <a href="#elektrike">Oxhaqe elektrike</a>
+        <a href="#bioetanol">Oxhaqe me bioetanol</a>
+        <a href="#xhama">Oxhaqe me 2 pamje</a>
+        <a href="#tre-pamje">Oxhaqe me 3 pamje</a>
+        <a href="#ushape">Oxhaqe në formë U</a>
         <a href="#produkte">Shiko të gjitha modelet →</a>
       </div>
     </div>
@@ -463,7 +647,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
   <div class="eyebrow">Projektim • Përzgjedhje • Montim</div><div class="script">Oxhaqe Cinga</div>
   <h1>Ngrohtësi që ndihet.<br><span>Elegancë që shihet.</span></h1>
   <p>Zgjidhje për oxhaqe moderne dhe tradicionale, të përshtatura me hapësirën, stilin dhe nevojat e shtëpisë suaj. Nga këshillimi te montimi profesional.</p>
-  <div class="actions"><a class="btn" href="#produkte">Eksploro oxhaqet <span>→</span></a><a class="btn outline" data-phone href="#">☎ Na telefononi</a></div>
+  <div class="actions"><a class="btn" href="#produkte">Eksploro oxhaqet <span>→</span></a><a class="btn outline" data-phone href="#">Na telefononi</a></div>
   <div class="trust"><span>Këshillim për projektin</span><span>Montim profesional</span><span>Shërbim në Shqipëri</span></div>
 </div></div></section>
 
@@ -520,7 +704,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
 </div></div></section>
 
 <section class="section" id="kontakt"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">Jemi këtu për t'ju ndihmuar</div><h2>Flasim për projektin tuaj?</h2></div><p>Na telefononi, na shkruani në WhatsApp ose na gjeni në rrjetet sociale. Për një përgjigje më të saktë, dërgoni foton dhe përmasat e ambientit.</p></div>
-<div class="contactgrid"><div class="contactbox"><h3>Oxhaqe Cinga</h3><div class="contactline"><span>☎</span><div><b>Telefon / WhatsApp</b><a href="tel:+355685252555">+355 68 52 52 555</a></div></div><div class="contactline"><span>⌖</span><div><b>Adresa</b><span>Sauk, Tiranë, ngjitur me New York School</span></div></div><div class="contactline"><span>✉</span><div><b>Email</b><a href="mailto:oxhaqecinga@gmail.com">oxhaqecinga@gmail.com</a></div></div><div class="socials"><a href="https://www.facebook.com/share/1GEr27YEFo/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.instagram.com/oxhaqe.cinga?mdxt=ZTB0NmR6ZGo4ZGM=" target="_blank" rel="noopener">Instagram ↗</a></div><a class="btn" href="https://wa.me/355685252555" target="_blank" rel="noopener">☎ Na shkruani në WhatsApp</a></div>
+<div class="contactgrid"><div class="contactbox"><h3>Oxhaqe Cinga</h3><div class="contactline"><div><b>Telefon / WhatsApp</b><a href="tel:+355685252555">+355 68 52 52 555</a></div></div><div class="contactline"><div><b>Adresa</b><span>Sauk, Tiranë, ngjitur me New York School</span></div></div><div class="contactline"><div><b>Email</b><a href="mailto:oxhaqecinga@gmail.com">oxhaqecinga@gmail.com</a></div></div><div class="socials"><a href="https://www.facebook.com/share/1GEr27YEFo/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.instagram.com/oxhaqe.cinga?mdxt=ZTB0NmR6ZGo4ZGM=" target="_blank" rel="noopener">Instagram ↗</a></div><a class="btn" href="https://wa.me/355685252555" target="_blank" rel="noopener">Na shkruani në WhatsApp</a></div>
 <div class="mapbox"><h3>Na gjeni në hartë</h3><div class="mapframe">
   <iframe title="Vendndodhja e Oxhaqe Cinga në Sauk, Tiranë"
     src="https://www.google.com/maps?q=Sauk%2C%20Tiran%C3%AB%2C%20pran%C3%AB%20New%20York%20School&output=embed"
@@ -528,17 +712,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
     allowfullscreen></iframe>
 </div><a class="btn outline small" data-map href="#">Hap Google Maps ↗</a></div></div>
 </div>
-<div class="contact-details"><div class="contact-address">📍 Adresa: Sauk, Tiranë, ngjitur me New York School</div>
-  <a href="tel:+355685252555">📞 +355 68 52 52 555</a>
-  <a href="mailto:oxhaqecinga@gmail.com">✉️ oxhaqecinga@gmail.com</a>
+<div class="contact-details"><div class="contact-address">Adresa: Sauk, Tiranë, ngjitur me New York School</div>
+  <a href="tel:+355685252555">+355 68 52 52 555</a>
+  <a href="mailto:oxhaqecinga@gmail.com">oxhaqecinga@gmail.com</a>
   <a href="https://www.instagram.com/oxhaqe.cinga?mdxt=ZTB0NmR6ZGo4ZGM=" target="_blank" rel="noopener">Instagram: @oxhaqe.cinga</a>
   <a href="https://www.facebook.com/share/1GEr27YEFo/" target="_blank" rel="noopener">Facebook – Oxhaqe Cinga</a>
-  <a href="https://maps.app.goo.gl/Z2grH8Q32QwEtPG9A" target="_blank" rel="noopener">📍 Hap vendndodhjen në Google Maps</a>
+  <a href="https://maps.app.goo.gl/Z2grH8Q32QwEtPG9A" target="_blank" rel="noopener">Hap vendndodhjen në Google Maps</a>
 </div>
 </section>
 </main>
 <footer><div class="wrap footrow"><span>© <span id="year"></span> Oxhaqe Cinga. Të gjitha të drejtat e rezervuara.</span><span>Ngrohtësi • Dizajn • Profesionalizëm</span><a href="#kreu">Kthehu lart ↑</a></div></footer>
-<a class="wa" data-whatsapp href="#" aria-label="Na kontaktoni në WhatsApp">☏</a>
+<a class="wa" data-whatsapp href="#" aria-label="Na kontaktoni në WhatsApp">WA</a>
 <div class="modal" id="modal"><div class="modalbox"><button class="close" id="closeModal" aria-label="Mbyll">×</button><div class="eyebrow">Informacion për produktin</div><h2 id="modalTitle"></h2><div id="modalText"></div><p class="note">Specifikimet përfundimtare konfirmohen sipas modelit dhe ofertës teknike.</p><a class="btn" id="modalAsk" href="#kontakt">Kërko ofertë për këtë model →</a></div></div>
 <script>
 // CONFIG — plotësoni të dhënat reale përpara publikimit.
