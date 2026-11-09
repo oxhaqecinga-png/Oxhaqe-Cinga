@@ -218,6 +218,70 @@ footer{padding:28px 0;background:#100d0b;border-top:1px solid var(--line);color:
 #me-dru .product-img{height:clamp(190px,24vw,320px)}
 #me-dru .product-img img{width:100%;height:100%;object-fit:cover;object-position:center}
 @media(max-width:680px){#me-dru .product-img{height:clamp(210px,58vw,300px)}}
+
+/* Përmirësime të kujdesshme për paraqitje më profesionale dhe mobile */
+:focus-visible {
+  outline: 2px solid var(--gold2);
+  outline-offset: 3px;
+}
+html { scroll-padding-top: 92px; }
+img { max-width: 100%; }
+.product, .cat, .step, .contactbox, .mapbox, .faq details {
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.product:hover, .step:hover, .contactbox:hover, .mapbox:hover {
+  border-color: rgba(233,163,59,.48);
+  box-shadow: 0 12px 30px rgba(0,0,0,.16);
+}
+.step { min-height: 100%; }
+.step h3 { line-height: 1.3; }
+.step p { line-height: 1.65; }
+@media (max-width: 680px) {
+  html { scroll-padding-top: 76px; }
+  .steps {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 46px minmax(0,1fr);
+    column-gap: 14px;
+    align-items: start;
+    padding: 17px 16px;
+  }
+  .step .num {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 42px;
+    height: 42px;
+    margin-top: 1px;
+  }
+  .step h3 {
+    grid-column: 2;
+    margin: 0 0 5px;
+    font-size: 1.04rem;
+  }
+  .step p {
+    grid-column: 2;
+    margin: 0;
+    font-size: .91rem;
+    line-height: 1.55;
+  }
+  .section { padding: 50px 0; }
+  .sectionhead { margin-bottom: 23px; }
+  .sectionhead p { margin-top: 10px; }
+  .hero-content { max-width: 100%; }
+  .actions .btn { min-height: 46px; }
+  .wa { width: 54px; height: 54px; }
+}
+@media (max-width: 380px) {
+  .wrap { width: 91%; }
+  .toplinks { gap: 11px; font-size: .82rem; }
+  .categories { gap: 9px; }
+  .categories .cat { min-height: 165px; }
+  .brand { gap: 8px; }
+}
+
 </style>
 </head>
 <body>
